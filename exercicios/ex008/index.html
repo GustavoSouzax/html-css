@@ -1,0 +1,52 @@
+<!DOCTYPE html>
+<html lang="pt-br">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="shortcut icon" href="favicon.ico" type="image/x-icon">
+    <title>Negrito e italico</title>
+    <style>
+        body {
+            font-family: sans-serif;
+        }
+        header {
+            background-color: aqua;
+            padding: 10px 0;
+            text-align: center;
+            font-size: 22px;
+        }
+        mark {
+            background-color: aqua;
+        }
+    </style>
+</head>
+<body>
+    <header>
+        <h1>Principais Formatações</h1>
+    </header>
+    <h2>Negrito/ Destaque</h2>
+    <p>Nesta frase, temos um <b>termo em negrito</b> usando a tag b (não semântica)</p>
+    <p>Nesta frase, temos um <strong>termo em destaque</strong> usando a tag STRONG (semântica)</p>
+    <h2>Itálico/ Ênfase</h2>
+    <p>Nesta frase, temos um <i>termo em itálico</i> usando a tag I (não semântica)</p>
+    <p>Nesta frase, temos um <em>termo em ênfase</em> usando a tag EM (semântica)</p>
+    <h2>Texto marcado</h2>
+    <p>Podemos criar também <mark>um texo marcado</mark> usando a tag MARK</p>
+    <p>E no outro parágrafo temos outro texto <mark>marcado no final</mark></p>
+    <p><em>Nota: a mudança das cores da tag MARK foi feita em css lá no &lt;head&gt; da página</em></p>
+    <h2>Texto grande e pequeno</h2>
+    <p>Estamos criando um <big>texto grande</big> e um <small>texo pequeno</small></p>
+    <p><em>Nota: A tag BIG para textos grande é obsoleta, ou seja, ela é uma forma diferente da tag SMALL que é semântica. <br>
+    Para mudar o tamanho da letra para coloca-la grande utilizamos as <ins style="color: red;">CSS</ins></em></p>
+    <h2>Texto deletado</h2>
+    <p>Podemos marcar um <del>texto como deletado</del> para indicar que ele deve ser lido, mas não considerado</p>
+    <h2>Texto inserido</h2>
+    <p>Podemos marcar um <ins>texo como inserido</ins> para dar uma ênfase e indiacar que ele foi adicionado depois</p>
+    <p>Também podemos <u>inserir textos</u> usando a tag U (não semântica)</p>
+    <h2>Texto sobrescrito</h2>
+    <p>Para inserir coisas do tipo x<sup>20</sup>+3</p>
+    <h2>Texto subescrito</h2>
+    <p>Para inserir coisas do tipo H<sub>2</sub>O</p>
+    <p>Um paragrafo que <span style="font-size: 20pt;">tem outro paragrafo</span> dentro dele.</p>
+</body> 
+</html>

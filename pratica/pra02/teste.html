@@ -1,0 +1,36 @@
+<!DOCTYPE html>
+<html lang="pt-br">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Modo Escuro e Claro</title>
+  <style>
+    /* Estilos para o modo claro */
+    body {
+      background-color: #ffffff;
+      color: #000000;
+      font-family: sans-serif
+    }
+
+    /* Estilos para o modo escuro */
+    @media (prefers-color-scheme: dark) {
+      body {
+        background-color: #333333;
+        color: #ffffff;
+        font-family: sans-serif;
+      }
+    }
+  </style>
+</head>
+<body>
+  <h1>Modo Escuro e Claro</h1>
+  <p>Este é um exemplo de como ajustar o estilo com base nas preferências de tema do navegador do usuário.</p>
+
+  <script>
+    // Verifica se o navegador do usuário tem a preferência por tema escuro
+    if (window.matchMedia && window.matchMedia('(prefers-color-scheme: dark)').matches) {
+      document.body.classList.add('dark-mode');
+    }
+  </script>
+</body>
+</html>

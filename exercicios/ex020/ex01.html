@@ -1,0 +1,53 @@
+<!DOCTYPE html>
+<html lang="pt-br">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Exemplos de Pseudo-classes e Pseudo-elementos</title>
+    <style>
+        body {
+            font: normal 1em Arial, Helvetica, Sans-Serif;
+        }
+
+        a {
+            font-weight: bold;
+            text-decoration: none;
+            color: red;
+        }
+
+        a:hover {
+            text-decoration: underline;
+        }
+
+        a:visited {
+            color: darkred;
+        }
+
+        #especial:hover {
+            color: white;
+            background-color: black;
+            text-decoration: none;
+        }
+
+        #especial::before{
+            content: '»';
+            font-weight: lighter;
+        }
+
+        #especial::after {
+            content: '«';
+            font-weight: lighter;
+        }
+
+    </style>
+</head>
+<body>
+    <h1>Personalizando um link</h1>
+    <p>Para aprender HTML e CSS, visite o <a href="https://github.com/gustavoguanabara" target="_blank" rel="external">Github do Guanabara</a></p>
+    <p>Para assistir trasmissões ao vivo, acesse <a href="https://www.twitch.tv/knights_works" target="_blank" rel="external">knights_works</a></p>
+    <div>
+        <p>Para aconpanhar a Gura, acesse <a href="https://youtube.com/@gawrgura?si=E9LsQvYRJUULxIu7" id="especial" target="_blank" rel="external">Canal Gawr Gura</a></p>
+        <iframe width="270px"src="https://www.youtube.com/embed/qMQ4P-vI3JI?si=QDGAvfxlefO4Qe8U" title="YouTube video player" frameborder="0" allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; web-share" referrerpolicy="strict-origin-when-cross-origin" allowfullscreen></iframe>
+    </div>
+</body>
+</html>

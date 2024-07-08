@@ -1,0 +1,43 @@
+<!DOCTYPE html>
+<html lang="pt-br">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="shortcut icon" href="imagens/favicon.ico" type="image/x-icon">
+    <title>Midias em HTML5</title>
+    <style>
+        body{
+            font-family: sans-serif;
+        }
+    </style>
+</head>
+<body>
+    <h1>Imagnes dinâmicas</h1>
+    <p>Tente abrir esse site em vários dispositivos diferentes ou simplesmente aumnete e diminua o tamanho do seu navegador.</p>
+
+    <picture>
+        <source media="(max-width: 750px)"  srcset="imagens/foto-p.png" type="image/png"><!--Source media type para mudar para a imagem pequena-->
+        <source media="(max-width: 1050px)" srcset="imagens/foto-m.png" type="image/png"><!--Source media type para mudar para a imagem média-->
+        <img src="imagens/foto-g.png" alt="Imagem flexivel"><!--Imagem padrão-->
+    </picture><!--A tag picture permite que crie vários sources para a vizualização-->
+    <h1>Reproduzindo Áudio</h1>
+    <p>Vamos aprender a reproduzir áudios em HTML5.</p>
+    <audio preload="metadata" controls> <!--O parâmetro controls é essencial para poder dar play no audio no site-->
+        <source src="midia/Two Hearts - TrackTribe.mp3" type="audio/mpeg">
+        <source src="midia/Two Hearts - TrackTribe.ogg" type="audio/ogg">
+        <source src="midia/Two Hearts - TrackTribe.wav" type="audio/wav">
+        <!-- mp3 ogg wav - O formato wav não é recomendado porque gera um arquivo de audio pesado para o site-->
+        <p>Infelizmente seu navegador não consegue reproduzir o audio. <a href="midia/Two Hearts - TrackTribe.mp3" download type="audio/mpeg">Clique aqui para fazer o download do arquivo MP3</a></p>
+    </audio>
+    <br> <br>
+    <h1>Colocando videos no site</h1>
+    <h2>Videos com arquivos internos</h2>
+    <a href="midia/video.mp4" download type="video/mp4">
+        <video width="500" height="400" controls>
+            <source src="midia/video.mp4" type="video/mp4">
+            <track src="Um video qualquer" kind="subtitles"  srclang="en" label="English">
+            Seu navegador não é compativel com HTML video
+        </video>
+    </a>
+    <h2>Videos externos</h2>
+</html>

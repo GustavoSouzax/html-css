@@ -1,0 +1,104 @@
+<!DOCTYPE html>
+<html lang="pt-br">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="shortcut icon" href="favicon.ico" type="image/x-icon">
+    <title>Document</title>
+    <style>
+        body {
+            font-family: sans-serif;
+        }
+        code{
+            font-size: 13pt;
+        }
+        span{
+            color: rgb(255, 60, 60);
+        }
+    </style>
+</head>
+<body>
+    <h1 style="text-align: center;">Exercício de prática 02</h1>
+    <h2>Colocando links</h2>
+    <h3>Links externos e internos</h3>
+    <p>Para criar hiperlinks utilizamos a tag <strong>a</strong> <br>
+        Exemplo: <br>
+        <span><code>&lt;p&gt;Você pode acessar meu &lt;a href="https://www.instagram.com/knights_works/"&gt;instagram&lt;/a&gt; e me seguir lá.&lt;/p&gt;</code></span> <br>
+        <p><em>Nota: Na tag de hyperlink &lt;a&gt; tem como seu principal atributo o <ins>href</ins>. <br> Para poder controlar onde o site de destino vai abrir, podemos usar o atributo <ins>target</ins>, que suporta os seguintes valoraes</em>. <br>
+            <code>_blank</code> vai abrir o link em uma nova janela em branco <br>
+            <code>_self</code> vai abrir o link na janela ou frame atual (padrão) <br>
+            <code>_top</code> vai desfazer todos os frames e abrir o destino no navegador completo <br>
+            <code>_parent</code> similar ao uso do <code>_top</code> em uma raferência a janela mãe nome-do-frame caso esteja usando frames, indicar o nome da jenla a abrir <br>
+            <code>
+        <pre>
+            &lt;a href="pagina002.html" target="_self"&gt;
+                Continuar navegando no site
+            &lt;/a&gt;
+        </pre>
+            </code>
+            <code>
+        <pre>
+            &lt;a href"https://www.<ins>     </ins>.com" target="_blank"&gt;
+                Abrir link externo
+            &lt;/a&gt;
+        </pre>
+            </code>
+        </p>
+    </p>
+<h2></h2>
+<p><a href="../index.html" target="_self" rel="prev">Voltar para primeira página</a></p> <!--Os dois pontos seguidos (../) são utilizados para volar a pasta mais explicação aula 10-2 ou no exercício 10 do materal em pdf-->
+<canvas id="graficoPizza" width="400" height="400" ></canvas>
+<script>
+// Obtenha o elemento canvas
+var canvas = document.getElementById('graficoPizza');
+var ctx = canvas.getContext('2d');
+
+// Defina o raio do gráfico de pizza
+var raio = Math.min(canvas.width, canvas.height) / 2;
+
+// Defina o centro do gráfico de pizza
+var centroX = canvas.width / 2;
+var centroY = canvas.height / 2;
+
+// Defina as fatias do gráfico de pizza e suas cores
+var fatias = [
+    { label: 'Fatia 1', valor: 30, cor: '#ff6384' },
+    { label: 'Fatia 2', valor: 20, cor: '#36a2eb' },
+    { label: 'Fatia 3', valor: 40, cor: '#ffce56' },
+    { label: 'Fatia 4', valor: 10, cor: '#000000' }
+];
+
+// Função para desenhar o gráfico de pizza
+function desenharGraficoPizza() {
+    var total = 0;
+    // Calcula o total dos valores das fatias
+    for (var i = 0; i < fatias.length; i++) {
+        total += fatias[i].valor;
+    }
+
+    var anguloInicial = -Math.PI / 2; // Começa na posição de 12 horas
+    // Desenha cada fatia do gráfico de pizza
+    for (var i = 0; i < fatias.length; i++) {
+        var anguloFinal = anguloInicial + (fatias[i].valor / total) * (2 * Math.PI);
+        ctx.beginPath();
+        ctx.moveTo(centroX, centroY);
+        ctx.arc(centroX, centroY, raio, anguloInicial, anguloFinal);
+        ctx.fillStyle = fatias[i].cor;
+        ctx.fill();
+        // Desenha o texto da legenda
+        var texto = fatias[i].label + ' (' + fatias[i].valor + '%)';
+        var textoAngulo = anguloInicial + (anguloFinal - anguloInicial) / 2;
+        var textoX = centroX + (raio / 2) * Math.cos(textoAngulo);
+        var textoY = centroY + (raio / 2) * Math.sin(textoAngulo);
+        ctx.fillStyle = '#000';
+        ctx.fillText(texto, textoX, textoY);
+        anguloInicial = anguloFinal;
+    }
+}
+
+// Chame a função para desenhar o gráfico de pizza
+desenharGraficoPizza();
+
+</script>
+</body>
+</html>

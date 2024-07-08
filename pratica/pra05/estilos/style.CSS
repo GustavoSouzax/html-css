@@ -1,0 +1,26 @@
+@charset "UTF-8";
+
+:root{
+    /* Paleta cores site */
+    --cor0: ;
+    --cor1: ;
+    --cor2: ;
+    --cor3: ;
+    --cor4: ;
+    /* Cores VS Code */
+    --vs0: rgb(244, 71, 71);
+    --vs1: rgb(86, 156, 214);
+    --vs2: rgb(206, 145, 120);
+    --vs3: rgb(204, 204, 204);
+    --vs4: rgb(128, 128, 128);
+    --vs5: rgb(31, 31, 31);
+    /* Fontes */
+    --fonte0: Arial, Helvetica, sans-serif;
+    --fonte1: Consolas, 'Courier New', monospace;
+    --fonte2: ;
+}
+
+*{
+    margin: 0px;
+    padding: 0px;
+}
