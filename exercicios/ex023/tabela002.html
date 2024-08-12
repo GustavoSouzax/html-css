@@ -12,6 +12,7 @@
         table {
             width: 500px;
             border-collapse: collapse;
+            position: relative;
         }
 
         caption {
@@ -26,14 +27,36 @@
             padding: 10px;
         }
 
+        caption {
+            font-size: 1.5em;
+            font-weight: bold;
+            padding: 10px;
+            background-color: lightgray;
+        }
+
+        thead > tr > th {
+            position: sticky;
+            top: -1px;
+            background-color: gray;
+        }
+
         thead, tfoot {
             background-color: gray;
             color: white;
         }
 
+        tbody tr:nth-child(odd) { /* 2n-1 */
+            background-color: white;
+        }
+        tbody tr:nth-child(even) { /* 2n */
+            background-color: lightgray;
+        }
+
         td.num {
             text-align: right;
         }
+
+
     </style>
 </head>
 <body>
@@ -59,7 +82,7 @@
         </thead>
         <tfoot>
             <tr>
-                <th scope="row">População total</th>
+                <th scope="row">Total de Habitantes</th>
                 <td class="num"><strong>203.062.512</strong></td>
             </tr>
         </tfoot>
@@ -174,5 +197,20 @@
             </tr>
         </tbody>
     </table>
+    <p>
+        Lorem ipsum dolor sit amet consectetur adipisicing elit. Dolore rerum perferendis velit consequatur, illo sapiente dolorem voluptatem aut ratione laborum possimus vitae temporibus eaque natus repellendus? Natus exercitationem adipisci dicta! Lorem ipsum dolor sit amet consectetur adipisicing elit. Aliquid, voluptatum omnis porro rem illo consectetur eum officiis exercitationem nesciunt sequi officia pariatur beatae inventore repellendus perspiciatis voluptates sunt quasi? Impedit? Lorem ipsum dolor sit amet consectetur, adipisicing elit. Eligendi illo incidunt ratione eum. Temporibus laborum, quos consequuntur cupiditate consectetur esse mollitia, natus saepe tempore iusto pariatur nisi, enim inventore magni. Lorem ipsum dolor sit amet, consectetur adipisicing elit. Modi asperiores nesciunt ab optio? Neque aut sequi exercitationem aliquam voluptatem modi cumque veritatis eligendi, eum minima distinctio, explicabo vel facilis quisquam!
+    </p>
+    <p>
+        Lorem ipsum dolor sit amet consectetur adipisicing elit. Dolore rerum perferendis velit consequatur, illo sapiente dolorem voluptatem aut ratione laborum possimus vitae temporibus eaque natus repellendus? Natus exercitationem adipisci dicta! Lorem ipsum dolor sit amet consectetur adipisicing elit. Aliquid, voluptatum omnis porro rem illo consectetur eum officiis exercitationem nesciunt sequi officia pariatur beatae inventore repellendus perspiciatis voluptates sunt quasi? Impedit? Lorem ipsum dolor sit amet consectetur, adipisicing elit. Eligendi illo incidunt ratione eum. Temporibus laborum, quos consequuntur cupiditate consectetur esse mollitia, natus saepe tempore iusto pariatur nisi, enim inventore magni. Lorem ipsum dolor sit amet, consectetur adipisicing elit. Modi asperiores nesciunt ab optio? Neque aut sequi exercitationem aliquam voluptatem modi cumque veritatis eligendi, eum minima distinctio, explicabo vel facilis quisquam!
+    </p>
+    <p>
+        Lorem ipsum dolor sit amet consectetur adipisicing elit. Dolore rerum perferendis velit consequatur, illo sapiente dolorem voluptatem aut ratione laborum possimus vitae temporibus eaque natus repellendus? Natus exercitationem adipisci dicta! Lorem ipsum dolor sit amet consectetur adipisicing elit. Aliquid, voluptatum omnis porro rem illo consectetur eum officiis exercitationem nesciunt sequi officia pariatur beatae inventore repellendus perspiciatis voluptates sunt quasi? Impedit? Lorem ipsum dolor sit amet consectetur, adipisicing elit. Eligendi illo incidunt ratione eum. Temporibus laborum, quos consequuntur cupiditate consectetur esse mollitia, natus saepe tempore iusto pariatur nisi, enim inventore magni. Lorem ipsum dolor sit amet, consectetur adipisicing elit. Modi asperiores nesciunt ab optio? Neque aut sequi exercitationem aliquam voluptatem modi cumque veritatis eligendi, eum minima distinctio, explicabo vel facilis quisquam!
+    </p>
+    <p>
+        Lorem ipsum dolor sit amet consectetur adipisicing elit. Dolore rerum perferendis velit consequatur, illo sapiente dolorem voluptatem aut ratione laborum possimus vitae temporibus eaque natus repellendus? Natus exercitationem adipisci dicta! Lorem ipsum dolor sit amet consectetur adipisicing elit. Aliquid, voluptatum omnis porro rem illo consectetur eum officiis exercitationem nesciunt sequi officia pariatur beatae inventore repellendus perspiciatis voluptates sunt quasi? Impedit? Lorem ipsum dolor sit amet consectetur, adipisicing elit. Eligendi illo incidunt ratione eum. Temporibus laborum, quos consequuntur cupiditate consectetur esse mollitia, natus saepe tempore iusto pariatur nisi, enim inventore magni. Lorem ipsum dolor sit amet, consectetur adipisicing elit. Modi asperiores nesciunt ab optio? Neque aut sequi exercitationem aliquam voluptatem modi cumque veritatis eligendi, eum minima distinctio, explicabo vel facilis quisquam!
+    </p>
+    <p>
+        Lorem ipsum dolor sit amet consectetur adipisicing elit. Dolore rerum perferendis velit consequatur, illo sapiente dolorem voluptatem aut ratione laborum possimus vitae temporibus eaque natus repellendus? Natus exercitationem adipisci dicta! Lorem ipsum dolor sit amet consectetur adipisicing elit. Aliquid, voluptatum omnis porro rem illo consectetur eum officiis exercitationem nesciunt sequi officia pariatur beatae inventore repellendus perspiciatis voluptates sunt quasi? Impedit? Lorem ipsum dolor sit amet consectetur, adipisicing elit. Eligendi illo incidunt ratione eum. Temporibus laborum, quos consequuntur cupiditate consectetur esse mollitia, natus saepe tempore iusto pariatur nisi, enim inventore magni. Lorem ipsum dolor sit amet, consectetur adipisicing elit. Modi asperiores nesciunt ab optio? Neque aut sequi exercitationem aliquam voluptatem modi cumque veritatis eligendi, eum minima distinctio, explicabo vel facilis quisquam!
+    </p>
 </body>
 </html>
