@@ -1,0 +1,29 @@
+<!DOCTYPE html>
+<html lang="pt-br">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Formulário</title>
+</head>
+<body>
+    <h1>Exemplo de formulário</h1>
+    <form action="cadastro.php" method="get" autocomplete="on">
+        <fieldset>
+            <legend>Sexo</legend>
+            <input type="radio" name="sexo" id="masculino" value="M"><label for="masculino">Masculino</label><br>
+            <input type="radio" name="sexo" id="feminino" value="F" checked><label for="feminino">Feminino</label>
+        </fieldset>
+        <fieldset>
+            <legend>Jogos favoritos</legend>
+            <input type="checkbox" name="darksouls" id="idarksouls"><label for="idarksouls">Dark Souls</label><br>
+            <input type="checkbox" name="gta" id="igta" checked><label for="igta">GTA</label><br>
+            <input type="checkbox" name="thesims" id="ithesims"><label for="ithesims">The Sims</label><br>
+            <input type="checkbox" name="fifa" id="ififa"><label for="ififa">Fifa</label>
+        </fieldset>
+        <p>
+            <input type="submit" value="Enviar">
+            <input type="reset" value="Limpar">
+        </p>
+    </form>
+</body>
+</html>
